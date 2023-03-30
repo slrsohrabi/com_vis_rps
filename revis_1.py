@@ -60,7 +60,8 @@ while True:
 
                 if (scores[0] >= wnr_score):#Ai score check
                     start_game = False
-                    img_1 = cv2.imread("pics/looser_jp.png")
+                    img_1 = cv2.imread("pics/BG_0.png")
+                    cv2.putText(img_1,"player wins",(605,435),cv2.FONT_HERSHEY_PLAIN,6,(255,0,255),4)
                     cv2.imshow("winningpage",img_1)
                     cv2.waitKey(0)
                     cap.release()
@@ -68,8 +69,9 @@ while True:
 
                 if (scores[1] >= wnr_score):#player score check
                     start_game = False
-                    img_2 = cv2.imread("pics/winner_jp.png")
+                    img_2 = cv2.imread("pics/BG_0.png")
                     cv2.imshow("winningpage",img_2)
+                    cv2.putText(img_2,"player wins",(605,435),cv2.FONT_HERSHEY_PLAIN,6,(255,0,255),4)
                     cv2.waitKey(0)
                     cap.release()
                     cv2.destroyAllWindows()
